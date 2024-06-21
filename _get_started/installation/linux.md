@@ -16,7 +16,7 @@ PyTorch is supported on Linux distributions that use [glibc](https://www.gnu.org
 * [Fedora](https://getfedora.org/), minimum version 24
 * [Mint](https://linuxmint.com/download.php), minimum version 14
 * [OpenSUSE](https://software.opensuse.org/), minimum version 42.1
-* [PCLinuxOS](https://www.pclinuxos.com/get-pclinuxos/), minimum version 2014.7
+* [PCLinuxOS](https://www.pclinuxos.com/), minimum version 2014.7
 * [Slackware](http://www.slackware.com/getslack/), minimum version 14.2
 * [Ubuntu](https://www.ubuntu.com/download/desktop), minimum version 13.04
 
@@ -25,7 +25,7 @@ PyTorch is supported on Linux distributions that use [glibc](https://www.gnu.org
 ### Python
 {: #linux-python}
 
-Python 3.8 or greater is generally installed by default on any of our supported Linux distributions, which meets our recommendation.
+Python 3.8-3.11 is generally installed by default on any of our supported Linux distributions, which meets our recommendation.
 
 > Tip: By default, you will have to use the command `python3` to run Python. If you want to use just the command `python`, instead of `python3`, you can symlink `python` to the `python3` binary.
 
@@ -39,8 +39,6 @@ If you decide to use APT, you can run the following command to install it:
 ```bash
 sudo apt install python
 ```
-
-> It is recommended that you use Python 3.6, 3.7 or 3.8, which can be installed via any of the mechanisms above .
 
 > If you use [Anaconda](#anaconda) to install PyTorch, it will install a sandboxed version of Python that will be used for running PyTorch applications.
 
@@ -135,7 +133,7 @@ tensor([[0.3380, 0.3845, 0.3217],
         [0.4675, 0.3947, 0.1426]])
 ```
 
-Additionally, to check if your GPU driver and CUDA/ROCm is enabled and accessible by PyTorch, run the following commands to return whether or not the GPU driver is enabled (the ROCm build of PyTorch uses the same semantics at the python API level (https://github.com/pytorch/pytorch/blob/master/docs/source/notes/hip.rst#hip-interfaces-reuse-the-cuda-interfaces), so the below commands should also work for ROCm):
+Additionally, to check if your GPU driver and CUDA/ROCm is enabled and accessible by PyTorch, run the following commands to return whether or not the GPU driver is enabled (the ROCm build of PyTorch uses the same semantics at the python API level [link](https://github.com/pytorch/pytorch/blob/master/docs/source/notes/hip.rst#hip-interfaces-reuse-the-cuda-interfaces), so the below commands should also work for ROCm):
 
 ```python
 import torch
